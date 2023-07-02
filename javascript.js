@@ -29,13 +29,3 @@ function playRound(playerSelection, computerSelection){
         return(`You lose! ${computerSelection} beats ${playerSelection}!`);
     }
 }
-
-function game(){
-    let userChoice;
-    for (let i = 0; i < 5; i++) {
-        userChoice = prompt();
-        console.log(playRound(userChoice, getComputerChoice()))
-    }
-}
-
-game();
