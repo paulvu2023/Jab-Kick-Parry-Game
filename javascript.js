@@ -19,7 +19,7 @@ function playRound(playerSelection, computerSelection){
             || playerSelection === "Scissors" && computerSelection === "Paper"
             || playerSelection === "Paper" && computerSelection === "Rock"
     ){
-        return `You win! ${playerSelection} beats ${computerSelection}`;
+        return `You win! ${playerSelection} beats ${computerSelection}!`;
     } else if (computerSelection === "Rock" && playerSelection === "Scissors"
             || computerSelection === "Scissors" && playerSelection === "Paper"
             || computerSelection === "Paper" && playerSelection === "Rock")
@@ -30,12 +30,12 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(){
-    let userChoice;
-    for (let i = 0; i < 5; i++) {
-        userChoice = prompt();
-        console.log(playRound(userChoice, getComputerChoice()))
-    }
-}
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const msg = document.querySelector('div#round');
+        let winner = playRound(button.id, getComputerChoice());
+        msg.textContent = winner;
+    });
+});
 
-game();
