@@ -48,6 +48,12 @@ buttons.forEach((button) => {
         }
         userScoreSelector.textContent = userScore;
         compScoreSelector.textContent = compScore;
+        const gameWinner = document.querySelector('#winner');
+        if (userScore === 5) {
+            gameWinner.textContent = 'You win. Humanity is saved.';
+        } else if (compScore === 5) {
+            gameWinner.textContent = 'You lose. The end of humanity is near.';
+        }
     });
 });
 
