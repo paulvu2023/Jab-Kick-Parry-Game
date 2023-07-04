@@ -37,8 +37,8 @@ buttons.forEach((button) => {
         const userScoreSelector = document.querySelector('#userScore');
         const compScoreSelector = document.querySelector('#compScore');
         let winner = playRound(button.id, getComputerChoice());
-        let userScore = parseInt(userScoreSelector.textContent);
-        let compScore = parseInt(compScoreSelector.textContent);
+        let userScore = parseInt(userScoreSelector.textContent.slice(7));
+        let compScore = parseInt(compScoreSelector.textContent.slice(7));
         msg.textContent = winner;
         // check string to see if user won
         if (winner.slice(0, 5) == 'You w') {
@@ -46,8 +46,8 @@ buttons.forEach((button) => {
         } else if (winner.slice(0, 5) == 'You l') {
             compScore += 1;
         }
-        userScoreSelector.textContent = userScore;
-        compScoreSelector.textContent = compScore;
+        userScoreSelector.textContent = `Score: ${userScore}`;
+        compScoreSelector.textContent = `Score: ${compScore}`;
         const gameWinner = document.querySelector('#winner');
         if (userScore === 5) {
             gameWinner.textContent = 'You win. Humanity is saved.';
