@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.gameButtons');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         const msg = document.querySelector('div#round');
