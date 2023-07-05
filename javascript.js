@@ -33,27 +33,36 @@ function playRound(playerSelection, computerSelection){
 const buttons = document.querySelectorAll('.gameButtons');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        const msg = document.querySelector('div#round');
+        const roundWinner = document.querySelector('div#roundWinner');
         const userScoreSelector = document.querySelector('#userScore');
         const compScoreSelector = document.querySelector('#compScore');
         let winner = playRound(button.id, getComputerChoice());
         let userScore = parseInt(userScoreSelector.textContent.slice(7));
         let compScore = parseInt(compScoreSelector.textContent.slice(7));
-        msg.textContent = winner;
-        // check string to see if user won
-        if (winner.slice(0, 5) == 'You w') {
-            userScore += 1;
-        } else if (winner.slice(0, 5) == 'You l') {
-            compScore += 1;
-        }
-        userScoreSelector.textContent = `Score: ${userScore}`;
-        compScoreSelector.textContent = `Score: ${compScore}`;
-        const gameWinner = document.querySelector('#winner');
-        if (userScore === 5) {
-            gameWinner.textContent = 'You win. Humanity is saved.';
-        } else if (compScore === 5) {
-            gameWinner.textContent = 'You lose. The end of humanity is near.';
+        if (userScore < 5 && compScore < 5) {
+            roundWinner.textContent = winner;
+            // check string to see if user won or if computer won and change score
+            if (winner.slice(0, 5) == 'You w') {
+                userScore += 1;
+            } else if (winner.slice(0, 5) == 'You l') {
+                compScore += 1;
+            }
+            userScoreSelector.textContent = `Score: ${userScore}`;
+            compScoreSelector.textContent = `Score: ${compScore}`;
+            const gameWinner = document.querySelector('#winner');
+            if (userScore === 5) {
+                gameWinner.textContent = 'You win. Humanity is saved.';
+            } else if (compScore === 5) {
+                gameWinner.textContent = 'You lose. The end of humanity is near.';
+            }
         }
     });
 });
 
+const newGame = document.querySelector('#newGame');
+newGame.addEventListener('click', () => {
+    const userScoreSelector = document.querySelector('#userScore');
+    const compScoreSelector = document.querySelector('#compScore');
+    userScoreSelector.textContent = 'Score: 0';
+    compScoreSelector.textContent = 'Score: 0';
+})
