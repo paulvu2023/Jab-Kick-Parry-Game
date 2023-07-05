@@ -1,6 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
 body {
     background-image: url("street.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
 }
+
+h1 {
+    color: white;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 0 0 100px #FF0000, 0 0 100px #0000FF;
+}
+
+button {
+    transition-duration: 0.4s;
+    width: 10%;
+    border: none;
+    color: black;
+    background-color: white;
+    font-size: 2vw;
+}
+  
+button:hover {
+    background-color: red; /* Green */
+    color: white;
+}
+
+
