@@ -1,11 +1,11 @@
 function getComputerChoice(){
     randomChoice = Math.floor(Math.random() * 3);
     if (randomChoice == 2) {
-        return "Rock";
+        return "Jab";
     } else if (randomChoice == 1){
-        return "Paper";
+        return "Kick";
     } else {
-        return "Scissors";
+        return "Parry";
     }
 }
 
@@ -15,14 +15,14 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
         return("Tie. You're lucky.");
     }
-    else if (playerSelection === "Rock" && computerSelection === "Scissors"
-            || playerSelection === "Scissors" && computerSelection === "Paper"
-            || playerSelection === "Paper" && computerSelection === "Rock"
+    else if (playerSelection === "Jab" && computerSelection === "Parry"
+            || playerSelection === "Parry" && computerSelection === "Kick"
+            || playerSelection === "Kick" && computerSelection === "Jab"
     ){
         return `You win! ${playerSelection} beats ${computerSelection}!`;
-    } else if (computerSelection === "Rock" && playerSelection === "Scissors"
-            || computerSelection === "Scissors" && playerSelection === "Paper"
-            || computerSelection === "Paper" && playerSelection === "Rock")
+    } else if (computerSelection === "Jab" && playerSelection === "Parry"
+            || computerSelection === "Parry" && playerSelection === "Kick"
+            || computerSelection === "Kick" && playerSelection === "Jab")
     {
         return `You lose! ${computerSelection} beats ${playerSelection}!`;
     } else {
