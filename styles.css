@@ -44,7 +44,7 @@ img { width: 100%; height: auto; }
 .bottom-half {
     display: flex;
     align-items: center;
-    
+    justify-content: end;
 }
 
 .score_container {
