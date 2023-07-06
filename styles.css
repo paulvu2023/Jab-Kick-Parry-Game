@@ -47,6 +47,22 @@ img { width: 100%; height: auto; }
     justify-content: end;
 }
 
+#newGame {
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 4vw;
+    visibility: hidden;
+    background-color: red;
+    border-radius: 8px;
+    display: flex;
+    margin: auto;
+}
+
+#newGame:hover {
+    background-color: darkred;
+    color: black;
+}
+
 .score_container {
     margin-top: 3vw;
     display: flex;
@@ -79,17 +95,19 @@ img { width: 100%; height: auto; }
 }
 
 .gameButtons {
+    border: 2px solid black;
     transition-duration: 0.4s;
     padding: 1%;
-    border: none;
+    border-radius: 8px;
     color: black;
     background-color: #FFE546;
     font-size: 2vw;
 }
-  
-button:hover {
-    background-color: goldenrod;
+
+.gameButtons:hover {
+    background-color: FFE546;
     color: red;
 }
+
 
 
