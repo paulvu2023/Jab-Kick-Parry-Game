@@ -42,7 +42,9 @@ img { width: 100%; height: auto; }
 }
 
 .bottom-half {
-    justify-content: end;
+    display: flex;
+    align-items: center;
+    
 }
 
 .score_container {
@@ -53,18 +55,17 @@ img { width: 100%; height: auto; }
     font-size: 2vw;
 }
 
-.fight_container {
-    display: flex;
-    justify-content: center;
-}
-
 .img_container {
     max-width: 30vw;
 }
 
 .button_container {
+    display: flex;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 5vw;
 }
 
 
@@ -73,17 +74,13 @@ img { width: 100%; height: auto; }
     color: white;
 }
 
-#newGame {
-
-}
-
 #gameWinner {
     color: red;
 }
 
-button {
+.gameButtons {
     transition-duration: 0.4s;
-    width: 10%;
+    padding: 1%;
     border: none;
     color: black;
     background-color: white;
