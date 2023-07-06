@@ -73,6 +73,10 @@ h1 {
     font-size: 2vw;
 }
 
+#roundWinner {
+    margin-bottom: 20px;
+}
+
 #gameWinner {
     color: red;
     font-size: 2.5vw;
