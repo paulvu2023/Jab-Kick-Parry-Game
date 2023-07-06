@@ -83,13 +83,13 @@ img { width: 100%; height: auto; }
     padding: 1%;
     border: none;
     color: black;
-    background-color: white;
+    background-color: #FFE546;
     font-size: 2vw;
 }
   
 button:hover {
-    background-color: red; /* Green */
-    color: white;
+    background-color: goldenrod;
+    color: red;
 }
 
 
