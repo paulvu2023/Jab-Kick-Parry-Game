@@ -5,21 +5,26 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+html {
+    height: 100%;
+}
 
 body {
+    height: 100%;
     background-image: url("images/street.jpg");
-    background-position: 50% 70%;
+    background-position: 50% 90%;
     background-repeat: repeat;
     background-size: cover;
 }
 
-img { width: 20%; height: auto; }
+img { width: 100%; height: auto; }
 
 .big_container {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
     flex: 1;
+    justify-content: end;
 }
 
 .score_container {
@@ -31,11 +36,17 @@ img { width: 20%; height: auto; }
 }
 
 .fight_container {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img_container {
+    max-width: 30vw;
 }
 
 .button_container {
     flex-direction: row;
+    justify-content: space-around;
 }
 
 h1 {
