@@ -29,8 +29,6 @@ h1 {
     text-shadow: 0 0 100px #FF0000, 0 0 100px #0000FF;
 }
 
-img { width: 100%; height: auto; }
-
 .top-half, .bottom-half {
     display: flex;
     flex: 1;
@@ -45,6 +43,22 @@ img { width: 100%; height: auto; }
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+.score_container {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 2vw;
+}
+
+#userScore, #compScore, #roundWinner {
+    color: white;
+}
+
+#gameWinner {
+    color: red;
 }
 
 #newGame {
@@ -63,17 +77,11 @@ img { width: 100%; height: auto; }
     color: black;
 }
 
-.score_container {
-    margin-top: 3vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 2vw;
-}
-
 .img_container {
     max-width: 30vw;
 }
+
+img { width: 100%; height: auto; }
 
 .button_container {
     display: flex;
@@ -82,16 +90,6 @@ img { width: 100%; height: auto; }
     justify-content: center;
     flex-wrap: nowrap;
     gap: 5vw;
-}
-
-
-
-#userScore, #compScore, #roundWinner {
-    color: white;
-}
-
-#gameWinner {
-    color: red;
 }
 
 .gameButtons {
