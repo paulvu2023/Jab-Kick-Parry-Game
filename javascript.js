@@ -59,14 +59,13 @@ buttons.forEach((button) => {
         const roundWinner = document.querySelector('div#roundWinner');
         const userScoreSelector = document.querySelector('#userScore');
         const compScoreSelector = document.querySelector('#compScore');
-        let winner = playRound(button.id, getComputerChoice());
         let userScore = parseInt(userScoreSelector.textContent.slice(12));
         let compScore = parseInt(compScoreSelector.textContent.slice(13));
-        
         if (userScore === 0 && compScore === 0) {
             fightScene = document.querySelector('.fightScene');
             fightScene.src = "images/defaultposition.png";
         }
+        let winner = playRound(button.id, getComputerChoice());
 
         if (userScore < 5 && compScore < 5) {
             roundWinner.textContent = winner;
