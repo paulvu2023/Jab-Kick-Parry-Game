@@ -50,21 +50,12 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 2vw;
-}
-
-#userScore, #compScore, #roundWinner {
-    color: white;
-}
-
-#gameWinner {
-    color: red;
 }
 
 #newGame {
     border: 2px solid black;
     padding: 10px;
-    font-size: 4vw;
+    font-size: 2vw;
     visibility: hidden;
     background-color: red;
     border-radius: 8px;
@@ -74,7 +65,23 @@ h1 {
 
 #newGame:hover {
     background-color: darkred;
-    color: black;
+    color: white;
+}
+
+#userScore, #compScore, #roundWinner {
+    color: white;
+    font-size: 2vw;
+}
+
+#gameWinner {
+    color: red;
+    font-size: 2.5vw;
+}
+
+.winner_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .img_container {
