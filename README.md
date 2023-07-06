@@ -1,4 +1,4 @@
 # rockpaperscissors
-TOP rock paper scissors Project
+TOP Rock Paper Scissors Project
 
-This is a very simple rock, paper, scissors project that is part of the The Odin Project Fundamentals Curriculum. 
+This is my Rock Paper Scissors Project for The Odin Project Foundations Curriculum. I decided to be creative and put a little twist by keeping the core concept of Rock Paper Scissors but turning it into a fighting game. It was difficult to program this at first but I'm learning a lot. Mark my words, I will be a software developer no matter what.
