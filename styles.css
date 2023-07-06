@@ -15,15 +15,33 @@ body {
     background-position: 50% 90%;
     background-repeat: repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: end;
+}
+
+h1 {
+    margin-top: 4vw;
+    color: white;
+    font-size: 4vw;
+    text-align:center;
+    text-shadow: 0 0 100px #FF0000, 0 0 100px #0000FF;
 }
 
 img { width: 100%; height: auto; }
 
-.big_container {
-    height: 100%;
+.top-half, .bottom-half {
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
+}
+
+.top-half {
+    justify-content: start;
+}
+
+.bottom-half {
     justify-content: end;
 }
 
@@ -49,13 +67,7 @@ img { width: 100%; height: auto; }
     justify-content: space-around;
 }
 
-h1 {
-    margin-top: 3%;
-    color: white;
-    font-size: 4vw;
-    text-align:center;
-    text-shadow: 0 0 100px #FF0000, 0 0 100px #0000FF;
-}
+
 
 #userScore, #compScore, #roundWinner {
     color: white;
