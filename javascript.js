@@ -49,7 +49,7 @@ buttons.forEach((button) => {
             }
             userScoreSelector.textContent = `Your Score: ${userScore}`;
             compScoreSelector.textContent = `Enemy Score: ${compScore}`;
-            const gameWinner = document.querySelector('#winner');
+            const gameWinner = document.querySelector('#gameWinner');
             if (userScore === 5) {
                 gameWinner.textContent = 'You win. Humanity is saved.';
             } else if (compScore === 5) {
@@ -63,6 +63,10 @@ const newGame = document.querySelector('#newGame');
 newGame.addEventListener('click', () => {
     const userScoreSelector = document.querySelector('#userScore');
     const compScoreSelector = document.querySelector('#compScore');
+    const gameWinner = document.querySelector('#gameWinner');
+    const roundWinner = document.querySelector('div#roundWinner');
+    gameWinner.textContent = '';
+    roundWinner.textContent = '';
     userScoreSelector.textContent = 'Your Score: 0';
     compScoreSelector.textContent = 'Enemy Score: 0';
 })

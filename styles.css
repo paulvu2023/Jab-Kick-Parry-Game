@@ -20,8 +20,12 @@ body {
     background-size:cover;
 }
 
-#userScore, #compScore {
+#userScore, #compScore, #roundWinner {
     color: white;
+}
+
+#gameWinner {
+    color: red;
 }
 
 button {
