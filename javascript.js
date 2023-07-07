@@ -4,6 +4,12 @@ function playSong() {
     document.getElementById("song").play();
 }
 
+function playHit() {
+    const hitSound = document.getElementById("hit");
+    hitSound.currentTime = 0;
+    hitSound.play();
+}
+
 function getComputerChoice(){
     randomChoice = Math.floor(Math.random() * 3);
     if (randomChoice == 2) {
@@ -37,6 +43,7 @@ function playRound(playerSelection, computerSelection){
 
 function changeFightImage (playerSelection, computerSelection){
     const fightScene = document.querySelector('.fightScene');
+    playHit();
     if (playerSelection === "Jab" && computerSelection === "Jab") {
         fightScene.src = "images/jabjab.png";
     } else if (playerSelection === "Kick" && computerSelection === "Kick") {
