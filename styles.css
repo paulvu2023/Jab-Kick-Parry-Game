@@ -90,9 +90,11 @@ h1 {
 
 .img_container {
     max-width: 30vw;
+    display: flex;
+    justify-content: center;
 }
 
-img { width: 100%; height: auto; }
+img { width: auto; height: 30vw; }
 
 .button_container {
     display: flex;
