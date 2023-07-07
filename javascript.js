@@ -1,3 +1,9 @@
+window.addEventListener('mousemove', playSong) 
+document.getElementById("song").loop = true;
+function playSong() {
+    document.getElementById("song").play();
+}
+
 function getComputerChoice(){
     randomChoice = Math.floor(Math.random() * 3);
     if (randomChoice == 2) {
