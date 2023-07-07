@@ -43,7 +43,6 @@ function playRound(playerSelection, computerSelection){
 
 function changeFightImage (playerSelection, computerSelection){
     const fightScene = document.querySelector('.fightScene');
-    playHit();
     if (playerSelection === "Jab" && computerSelection === "Jab") {
         fightScene.src = "images/jabjab.png";
     } else if (playerSelection === "Kick" && computerSelection === "Kick") {
@@ -63,6 +62,7 @@ function changeFightImage (playerSelection, computerSelection){
     } else if (computerSelection === "Kick" && playerSelection === "Jab") {
         fightScene.src = "images/jabkick.png";
     }
+    playHit();
 }
 
 const buttons = document.querySelectorAll('.gameButtons');
