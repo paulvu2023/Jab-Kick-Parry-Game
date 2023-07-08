@@ -68,13 +68,15 @@ h1 {
     color: white;
 }
 
-#userScore, #compScore, #roundWinner {
+#userScore, #compScore {
     color: white;
     font-size: 2vw;
 }
 
 #roundWinner {
     margin-bottom: 20px;
+    font-size: 2vw;
+    color: red;
 }
 
 #gameWinner {
